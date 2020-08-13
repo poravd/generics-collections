@@ -146,13 +146,30 @@ public class MyListTest {
 
     @Test
     public void testListResizing() {
-        myList.add(0, "car1");
-        myList.add(0, "car2");
-        myList.add(0, "car3");
-        myList.add(0, "car4");
-        myList.add(0, "car5");
-        myList.add(0, "car6");
-        myList.add(0, "car7");
+        String car1 = "car1";
+        myList.add(0, car1);
+        Assert.assertEquals(car1, myList.get(0));
+        String car2 = "car2";
+        myList.add(0, car2);
+        Assert.assertEquals(car2, myList.get(0));
+        Assert.assertEquals(car1, myList.get(1));
+        String car3 = "car3";
+        myList.add(0, car3);
+        Assert.assertEquals(car3, myList.get(0));
+        Assert.assertEquals(car2, myList.get(1));
+        Assert.assertEquals(car1, myList.get(2));
+        String car4 = "car4";
+        myList.add(0, car4);
+        Assert.assertEquals(car4, myList.get(0));
+        Assert.assertEquals(car3, myList.get(1));
+        Assert.assertEquals(car2, myList.get(2));
+        Assert.assertEquals(car1, myList.get(3));
+        String car5 = "car5";
+        myList.add(0, car5);
+        String car6 = "car6";
+        myList.add(0, car6);
+        String car7 = "car7";
+        myList.add(0, car7);
         myList.add(0, "car8");
         myList.add(0, "car9");
         myList.add(0, "car10");
