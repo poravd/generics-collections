@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -6,9 +7,13 @@ import java.util.List;
 
 public class MyListTest {
 
-    MyList<String> myList = new MyArrayList<>();
+    MyList<String> myList;
 
-    List<String> tmp = new ArrayList<>();
+    @Before
+    public void init() {
+        myList = new MyArrayList<>();
+    }
+
     @Test
     public void testAddElement() {
         Assert.assertEquals(0, myList.size());
