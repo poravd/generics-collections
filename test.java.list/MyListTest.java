@@ -143,4 +143,21 @@ public class MyListTest {
         Assert.assertEquals(car1, myList.get(1));
         Assert.assertEquals(2, myList.size());
     }
+
+    @Test
+    public void testListResizing() {
+        myList.add(0, "car1");
+        myList.add(0, "car2");
+        myList.add(0, "car3");
+        myList.add(0, "car4");
+        myList.add(0, "car5");
+        myList.add(0, "car6");
+        myList.add(0, "car7");
+        myList.add(0, "car8");
+        myList.add(0, "car9");
+        myList.add(0, "car10");
+        myList.add(0, "car11");
+        myList.add(0, "car12");
+        Assert.assertEquals(12, myList.size());
+    }
 }
